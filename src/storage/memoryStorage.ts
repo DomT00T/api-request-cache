@@ -1,14 +1,11 @@
-// memoryStorage.ts
-export interface MemoryStorage {
-
+export interface IMemoryStorage {
     getItem<T>(key: string): Promise<T | null>;
     setItem<T>(key: string, value: T): Promise<void>;
     removeItem(key: string): Promise<void>;
     clear(): Promise<void>;
 }
 
-
-export class MemoryStorage implements MemoryStorage {
+export class MemoryStorage implements IMemoryStorage {
     private store: Map<string, any> = new Map();
 
     async getItem<T>(key: string): Promise<T | null> {

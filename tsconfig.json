@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+      "target": "ES6",                        // เป้าหมายของการคอมไพล์ให้เป็น ES6
+      "module": "CommonJS",                   // ใช้โมดูล CommonJS สำหรับ Node.js และ NPM
+      "declaration": true,                    // สร้างไฟล์ .d.ts เพื่อช่วยใน TypeScript typings
+      "outDir": "./dist",                     // ไดเรกทอรีที่ไฟล์ที่คอมไพล์แล้วจะถูกสร้าง
+      "strict": true,                         // เปิดใช้งานการตรวจสอบความเข้มงวดทั้งหมด
+      "esModuleInterop": true,                // ช่วยในการนำเข้าโมดูล ES ให้ทำงานร่วมกับ CommonJS ได้
+      "skipLibCheck": true,                   // ข้ามการตรวจสอบประเภทในไฟล์ declaration
+      "forceConsistentCasingInFileNames": true // บังคับให้ใช้ชื่อไฟล์ที่มี case เดียวกัน
+    },
+    "include": ["src/**/*"],                  // รวมไฟล์ TypeScript ทั้งหมดในไดเรกทอรี src
+    "exclude": ["node_modules", "dist", "tests"] // ไม่รวมไฟล์และไดเรกทอรีที่ไม่ต้องการคอมไพล์
+  }
+  
